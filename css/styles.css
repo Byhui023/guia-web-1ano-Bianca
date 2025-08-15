@@ -1,0 +1,140 @@
+/* Variáveis CSS */
+:root {
+    --primary-color: #2563EB;
+    --secondary-color: #10B981;
+    --text-color: #111827;
+    --bg-light: #F3F4F6;
+    --border-color: #E5E7EB;
+    --font-title: 'Poppins', sans-serif;
+    --font-text: 'Inter', sans-serif;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos base */
+body {
+    font-family: var(--font-text);
+    color: var(--text-color);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-title);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Componentes */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--bg-light);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: none; /* Escondido no mobile */
+    list-style: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 6rem 1rem 3rem;
+    background: linear-gradient(to bottom, var(--bg-light), white);
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #1d4ed8;
+}
+
+.what-is {
+    padding: 3rem 1rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.tech-card {
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+.code-block {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    font-family: monospace;
+    margin-top: 1rem;
+}
+
+footer {
+    background-color: var(--text-color);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        gap: 2rem;
+    }
+
+    nav li a {
+        padding: 0.5rem;
+    }
+
+    .cards-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tech-card {
+        flex: 1;
+        min-width: 250px;
+        max-width: 350px;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+}
